@@ -1,0 +1,6 @@
+def call(def releaseVersionParam,def urlGit, def liveCycle) {
+     withCredentials([usernamePassword(credentialsId: 'GIT_AEM', passwordVariable: 'GIT_PASSWORD', usernameVariable: 'GIT_USERNAME')]) {
+		        sh "git remote set-url origin https://${GIT_USERNAME}:${GIT_PASSWORD}@${url}"	 
+		        sh "git push --set-upstream origin ${liveCycle}-${releaseVersionParam}"
+	 }
+}
