@@ -1,9 +1,9 @@
 def call(def urlGit) {
      withCredentials([usernamePassword(credentialsId: 'GIT_AEM', passwordVariable: 'GIT_PASSWORD', usernameVariable: 'GIT_USERNAME')]) {
-		        sh "git remote set-url origin https://${GIT_USERNAME}:${GIT_PASSWORD}@${url}"	 
-		        sh "git checkout master"
-				sh "git pull"
-				sh "git checkout develop"
-				sh "git pull"
+		        bat "git remote set-url origin https://${GIT_USERNAME}:${GIT_PASSWORD}@${url}"	 
+		        bat "git checkout master"
+				bat "git pull"
+				bat "git checkout develop"
+				bat "git pull"
 	 }
 }

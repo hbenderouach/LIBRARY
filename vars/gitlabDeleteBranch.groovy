@@ -1,3 +1,3 @@
 def call(def releaseVersionParam) {
-       sh "git branch -D ${releaseVersionParam}"
+       bat "git branch -D ${releaseVersionParam}"
 }
